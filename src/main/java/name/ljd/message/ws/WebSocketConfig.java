@@ -11,12 +11,12 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {//2
-		registry.addEndpoint("/endpointAll").withSockJS();//3
+		registry.addEndpoint("/endpointAll").withSockJS();//3 前端构造SockJS参数用
 	}
 
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry registry) {//4
-		registry.enableSimpleBroker("/all");//5
+		registry.enableSimpleBroker("/all");//5 订阅主题的基本路径
 		//super.configureMessageBroker(registry);
 	}
 

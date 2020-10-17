@@ -59,8 +59,7 @@
    		if(message){
    			//WsController.say()
         stompClient.send("/toall", {topic:"all"}, 
-        		JSON.stringify({ 'name': name,
-        						'message':message}));
+        		JSON.stringify({ 'name': name,'message':message}));
    		}
     }
 
