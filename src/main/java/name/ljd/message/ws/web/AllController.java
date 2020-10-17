@@ -16,7 +16,7 @@ public class AllController {
 	private SimpMessagingTemplate template;
 	
 	@MessageMapping("/toall")//1 前端发送请求的路径
-	@SendTo("/all/getResponse")//WebSocketConfig.configureMessageBroker//前端订阅的主题
+	@SendTo("/topic/aboutAll")//WebSocketConfig.configureMessageBroker//前端订阅的主题
 	public OutResponse say(InMessage message) throws Exception {
 		//Thread.sleep(3000);
 		//return new TheResponse("Welcome, "+message.getName()+"!");

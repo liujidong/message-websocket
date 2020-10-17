@@ -16,7 +16,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry registry) {//4
-		registry.enableSimpleBroker("/all");//5 订阅主题的基本路径
+		registry.enableSimpleBroker("/topic");//5 订阅主题的基本路径
 		//super.configureMessageBroker(registry);
 	}
 

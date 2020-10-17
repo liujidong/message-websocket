@@ -38,7 +38,7 @@
         stompClient.connect({}, function(frame) {
             setConnected(true);
             console.log('Connected: ' + frame);
-            stompClient.subscribe('/all/getResponse', function(respnose){ //WsController.say()
+            stompClient.subscribe('/topic/aboutAll', function(respnose){ //WsController.say()
                 showResponse(JSON.parse(respnose.body));
             });
         });
