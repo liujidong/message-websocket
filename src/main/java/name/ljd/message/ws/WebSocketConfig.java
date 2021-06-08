@@ -19,7 +19,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	public void configureMessageBroker(MessageBrokerRegistry registry) {//4
 		registry.enableSimpleBroker("/all");//5
 		//super.configureMessageBroker(registry);
-		registry.enableSimpleBroker("/queue","/topic");
+		registry.enableSimpleBroker("/queue","/topic");//点对点应增加/quence消息代理
 	}
 
 }

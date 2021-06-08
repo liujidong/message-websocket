@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-@EnableWebSecurity
+//@EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -29,8 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     //4
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    		auth
-                .inMemoryAuthentication()
+    		auth.inMemoryAuthentication()
                 .withUser("x").password("x").roles("USER")
                 .and()
                 .withUser("y").password("y").roles("USER");
